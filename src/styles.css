@@ -1,0 +1,74 @@
+div.invObjects {
+	width: 20%;
+	height: 100px;
+	float: left;
+	background-color: #ffA500;
+	padding: 15px;
+	margin-left:12px;
+}
+
+div.products {
+	width:45%;
+	background-color: #FFF;
+	padding: 10px;
+}
+
+div {
+	width:45%;
+	background-color: #FFF;
+	padding: 10px;
+}
+
+form {
+	width:100%;
+}
+
+table {
+	width:100%;
+}
+
+th {
+	background-color: #8FBC8F;
+	color: #000;
+	padding: 5px;
+}
+
+th.identity {
+	background-color: #FFF;
+}
+
+tbody {
+	background-color: #000;
+	color: #8FBC8F;
+}
+
+td {
+	background-color: #000;
+	color: #FF0000;
+	padding: 5px;
+}
+
+label {
+	min-width:75px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right: 10px;
+}
+
+input {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+input[type=submit] {
+	vertical-align: bottom;
+}
+
+input.identity {
+	width:0px;
+}
+
+input.free {
+	width:100%;
+	vertical-align: middle;
+}
