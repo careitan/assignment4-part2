@@ -7,6 +7,7 @@
 
 		$create = 'DELETE FROM inventory WHERE id = ?';
 
+/* CS290 Lecture example on Prepared Statments - refactored for parameter*/
 		$stmnt = $mysqli->prepare($create);
 		if ($mysqli->connect_errno) {
 			echo 'MySQL Object Error on Prepare Create: '.$mysqli->connect_errno.' '.

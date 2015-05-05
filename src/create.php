@@ -6,7 +6,8 @@
 		require_once('conn/MySQLOSUDB.php');
 
 		$create = 'INSERT INTO inventory (name, category, length) VALUES (?, ?, ?)';
-		
+
+/* CS290 Lecture example on Prepared Statments - refactored for parameter*/		
 		$stmnt = $mysqli->prepare($create);
 		if ($mysqli->connect_errno) {
 			echo 'MySQL Object Error on Prepare Create: '.$mysqli->connect_errno.' '.
