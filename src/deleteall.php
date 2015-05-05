@@ -5,7 +5,7 @@
 	if (isset($_POST)) {
 		require_once('conn/MySQLOSUDB.php');
 
-		$create = 'DELETE FROM inventory';
+		$create = 'DELETE FROM videos';
 
 /* CS290 Lecture example on Prepared Statments - refactored for parameter*/
 		$stmnt = $mysqli->prepare($create);

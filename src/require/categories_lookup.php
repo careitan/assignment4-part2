@@ -1,5 +1,5 @@
 	<?php
-		$TSQL = 'SELECT DISTINCT category FROM inventory ORDER BY category';
+		$TSQL = 'SELECT DISTINCT category FROM videos ORDER BY category';
 		
 		$stmnt = $mysqli->prepare($TSQL);
 		if ($mysqli->connect_errno) {

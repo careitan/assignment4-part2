@@ -7,7 +7,7 @@ if (isset($_POST)) {
 	require_once 'conn/MySQLOSUDB.php';
 
 /* http://stackoverflow.com/questions/4912946/query-to-toggle-boolean-value-in-mysql */
-	$TSQL = 'UPDATE inventory SET rented = !rented WHERE id = ?';
+	$TSQL = 'UPDATE videos SET rented = !rented WHERE id = ?';
 
 /* CS290 Lecture example on Prepared Statments - refactored for parameter*/	
 	$stmnt = $mysqli->prepare($TSQL);
