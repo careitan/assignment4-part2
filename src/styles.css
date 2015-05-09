@@ -1,6 +1,6 @@
 div.invObjects {
-	width: 40%;
-	height: 120px;
+	width: auto;
+	height: 100px;
 	float: left;
 	background-color: #ffA500;
 	padding: 15px;
