@@ -28,6 +28,6 @@
 				$stmnt->close();
 			}
 		}
-		include_once('require/home_redirect.php');
+		
 }
 ?>
