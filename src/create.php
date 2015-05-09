@@ -17,7 +17,7 @@
 		if (!$_POST['name']) {
 			echo 'Form POST ERROR Name of Product not populated.';
 			sleep(10);
-		} else if (!$_POST['length'] || (($_POST['length'] < 0) || ($_POST['length'] > 1000))) {
+		} else if (!$_POST['length'] || (($_POST['length'] < -1) || ($_POST['length'] > 1000))) {
 			echo 'Form POST ERROR length is not populated correctly. You entered: '.$_POST['length'];
 			sleep(10);
 		} else {
