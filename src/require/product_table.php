@@ -19,7 +19,7 @@
 		$stmnt->bind_result($id, $category, $name, $length, $rented);
 
 		echo '<div class="products"><table><thead><th>Category</th><th>Name</th><th>Length</th><th>Rental Status</th>
-		<th class="identity"></th></thead>';
+		<th class="identity">Actions</th></thead>';
 		echo '<body>';
 
 		while($stmnt->fetch()){

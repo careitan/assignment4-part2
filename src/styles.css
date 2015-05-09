@@ -64,8 +64,9 @@ input[type=submit] {
 	vertical-align: bottom;
 }
 
-input.free {
+input.rental {
 	width:auto;
+	vertical-align: middle;
 }
 
 input.free {
