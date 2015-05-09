@@ -2,7 +2,7 @@
 	error_reporting(E_ALL);
 	ini_set('display_errors', 'On');
 
-	$TSQL = "SELECT id, category, name, length, rented FROM inventory ORDER BY category, name";
+	$TSQL = "SELECT id, category, name, length, rented FROM videos ORDER BY category, name";
 	$stmnt = $mysqli->prepare($TSQL);
 
 	if ($mysqli->connect_errno) {
