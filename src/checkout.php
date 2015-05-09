@@ -16,9 +16,8 @@ if (isset($_POST)) {
 		$mysqli->connect_error;
 	}
 
-	if ($_POST['movieID']) {
-		$stmnt->bind_param("d", $_POST['movieID']);
-
+	if ($_POST['id']) {
+		$stmnt->bind_param("d", $_POST['id']);
 		$stmnt->execute();
 
 		if (!$stmnt) {

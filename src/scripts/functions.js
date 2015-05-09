@@ -16,7 +16,7 @@ function DeleteItem(id) {
 
 function CheckoutMovie(id) {
   var URL = "checkout.php";
-  var Param = {'movieID':id};
+  var Param = {'id':id};
   var Return = AJAXRequest(URL,Param);
 
   location.reload();
