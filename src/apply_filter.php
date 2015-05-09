@@ -8,7 +8,7 @@
 		if ($_POST['catSel']=="All Movies") {
 			$TSQL = 'UPDATE videos SET filter = 1;';
 		} else {
-			$TSQL = 'UPDATE videos SET filter = CASE category WHEN '.$_POST['catSel'].' THEN 1 ELSE 0 END;';
+			$TSQL = 'UPDATE videos SET filter = CASE category WHEN "'.$_POST['catSel'].'"" THEN 1 ELSE 0 END;';
 		}
 
 	/* CS290 Lecture example on Prepared Statments - refactored for parameter*/		
@@ -17,6 +17,7 @@
 			echo 'MySQL Object Error on Prepare Create: '.$mysqli->connect_errno.' '.
 			$mysqli->connect_error;
 		} else {
+			echo $TSQL;
 			$stmnt->execute();
 
 			if (!$stmnt) {
