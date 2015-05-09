@@ -8,7 +8,7 @@
 	if ($mysqli->connect_errno) {
 		echo 'MySQL Object Error on Prepare Category Lookup: '.$mysqli->connect_errno.' '.
 		$mysqli->connect_error;
-	} else if (!isset($_POST) || (!$_POST['categorySel'] && $_POST['categorySel'] == "All Movies"){
+	} else if (!isset($_POST) || (!$_POST['categorySel'] && $_POST['categorySel'] == "All Movies")) {
 		$stmnt->bind_param("s", "'%'");
 		$stmnt->execute();
 	} else {
