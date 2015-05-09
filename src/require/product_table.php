@@ -30,8 +30,8 @@ if (!$stmnt) {
 		} else {
 			echo '<td>Checked Out</td>';
 		}
-		echo '<td><input class="rental" type=button rental-id='.$id.' value="Check In/Out" OnClick="CheckOut(rental-id)">
-		<input class="free" type=button free-id='.$id.' value="Delete" OnClick="DeleteItem(free-id)"></td></tr>';
+		echo '<td><input class="rental" type=button id='.$id.' value="Check In/Out" OnClick="CheckOut(id)">
+		<input class="free" type=button id='.$id.' value="Delete" OnClick="DeleteItem(id)"></td></tr>';
 	}
 	echo '</body></table></div>';
 
