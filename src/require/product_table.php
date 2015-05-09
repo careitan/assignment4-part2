@@ -8,16 +8,16 @@
 	if ($mysqli->connect_errno) {
 		echo 'MySQL Object Error on Prepare Category Lookup: '.$mysqli->connect_errno.' '.
 		$mysqli->connect_error;
+	} else {
+		$stmnt->execute();
 	}
-
-	$stmnt->execute();
-	$stmnt->bind_result($id, $category, $name, $length, $rented);
 
 	if (!$stmnt) {
 		echo 'MySQL Statement failed on SELECT Categories: '.$stmnt->mysql_errno().' '.
 		$stmnt->error();
 	} else {
-		
+		$stmnt->bind_result($id, $category, $name, $length, $rented);
+
 		echo '<div class="products"><table><thead><th>Category</th><th>Name</th><th>Length</th><th>Rental Status</th>
 		<th class="identity" /></thead>';
 		echo '<body>';
