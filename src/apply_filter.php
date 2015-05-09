@@ -8,7 +8,7 @@
 		if ($_POST['catSel']=="All Movies") {
 			$TSQL = 'UPDATE videos SET filter = 1;';
 		} else {
-			$TSQL = 'UPDATE videos SET filter = CASE category WHEN "'.$_POST['catSel'].'"" THEN 1 ELSE 0 END;';
+			$TSQL = 'UPDATE videos SET filter = CASE category WHEN "'.$_POST['catSel'].'" THEN 1 ELSE 0 END;';
 		}
 
 	/* CS290 Lecture example on Prepared Statments - refactored for parameter*/		
