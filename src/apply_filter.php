@@ -17,7 +17,6 @@
 			echo 'MySQL Object Error on Prepare Create: '.$mysqli->connect_errno.' '.
 			$mysqli->connect_error;
 		} else {
-			echo $TSQL;
 			$stmnt->execute();
 
 			if (!$stmnt) {
@@ -28,6 +27,6 @@
 				$stmnt->close();
 			}
 		}
-		
+		include_once('require/home_redirect.php');
 }
 ?>

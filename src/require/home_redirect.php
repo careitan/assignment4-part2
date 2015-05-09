@@ -1,4 +1,5 @@
 <?php
+// CS494 basic redirector example from lecture
 	flush();
 	$filepath = explode('/',$_SERVER['PHP_SELF'],-1);
 	$filepath = implode('/', $filepath);

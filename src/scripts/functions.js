@@ -1,5 +1,4 @@
 
-
 function DeleteAll() {
 	var URL = "deleteall.php";
 	var Return = AJAXRequest(URL,null);
@@ -11,6 +10,22 @@ function DeleteItem(id) {
 	var URL = "delete.php";
 	var Param = {'id':id};
 	var Return = AJAXRequest(URL,Param);
+
+  location.reload();
+}
+
+function CheckoutMovie(id) {
+  var URL = "checkout.php";
+  var Param = {'id':id};
+  var Return = AJAXRequest(URL,Param);
+
+  location.reload();
+}
+
+function ApplyFilter(id) {
+  var URL = "apply_filter.php";
+  var Param = {'id':id};
+  var Return = AJAXRequest(URL,Param);
 
   location.reload();
 }
