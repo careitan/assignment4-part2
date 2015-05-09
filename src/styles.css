@@ -64,11 +64,11 @@ input[type=submit] {
 	vertical-align: bottom;
 }
 
-input.identity {
-	width:0px;
+input.free {
+	width:auto;
 }
 
 input.free {
-	width:100%;
+	width:auto;
 	vertical-align: middle;
 }
