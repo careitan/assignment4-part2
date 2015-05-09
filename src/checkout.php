@@ -6,17 +6,18 @@ ini_set('display_errors', 'On');
 if (isset($_POST)) {
 	require_once 'conn/MySQLOSUDB.php';
 
-/* http://stackoverflow.com/questions/4912946/query-to-toggle-boolean-value-in-mysql */
-	$TSQL = 'UPDATE videos SET rented = !rented WHERE id = '.$_POST['id'];
-	echo $TSQL;
-	
-/* CS290 Lecture example on Prepared Statments - refactored for parameter*/	
+	/* http://stackoverflow.com/questions/4912946/query-to-toggle-boolean-value-in-mysql */
+	$TSQL = 'UPDATE videos SET rented = !rented WHERE id = ?';
+
+	/* CS290 Lecture example on Prepared Statments - refactored for parameter*/	
 	$stmnt = $mysqli->prepare($TSQL);
 	if ($mysqli->connect_errno) {
 		echo 'MySQL Object Error on Prepare Create: '.$mysqli->connect_errno.' '.
 		$mysqli->connect_error;
-	} else {
-		//$stmnt->bind_param("d", $_POST['id']);
+	}
+
+	if ($_POST['id']) {
+		$stmnt->bind_param("d", $_POST['id']);
 		$stmnt->execute();
 
 		if (!$stmnt) {
