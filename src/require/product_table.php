@@ -9,7 +9,7 @@
 		echo 'MySQL Object Error on Prepare Category Lookup: '.$mysqli->connect_errno.' '.
 		$mysqli->connect_error;
 	} else if (!isset($_POST)){
-		$stmnt->bind_param("s", '%');
+		$stmnt->bind_param("s", "'%'");
 		$stmnt->execute();
 	} else {
 		$stmnt->bind_param("s", $_POST['categorySel']);
@@ -28,7 +28,12 @@
 
 		while($stmnt->fetch()){
 
-		echo '<tr><td>'.$category.'</td><td>'.$name.'</td><td>'.$length.'</td><td>'.$rented.'</td>';
+		echo '<tr><td>'.$category.'</td><td>'.$name.'</td><td>'.$length.'</td>';
+		if ($rented==0) {
+			echo '<td>Available</td>';
+		} else {
+			echo '<td>Checked Out</td>';
+		}
 		echo '<td><input class="rental" type=button rental-id='.$id.' value="Check In/Out" OnClick="CheckOut(rental-id)">
 		<input class="free" type=button free-id='.$id.' value="Delete" OnClick="DeleteItem(free-id)"></td></tr>';
 		}
