@@ -16,15 +16,7 @@ function DeleteItem(id) {
 
 function CheckoutMovie(id) {
   var URL = "checkout.php";
-  var Param = {'id':id};
-  var Return = AJAXRequest(URL,Param);
-
-  location.reload();
-}
-
-function ApplyFilter(id) {
-  var URL = "apply_filter.php";
-  var Param = {'id':id};
+  var Param = {'movieID':id};
   var Return = AJAXRequest(URL,Param);
 
   location.reload();
