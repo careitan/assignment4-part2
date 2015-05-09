@@ -2,23 +2,29 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
-$TSQL = "SELECT id, category, name, length, rented FROM videos WHERE category LIKE ? ORDER BY category, name";
+$TSQL = "";
+
+if (isset($_POST)) {
+	$TSQL = "SELECT id, category, name, length, rented FROM videos WHERE category LIKE ? ORDER BY category, name";
+} else {
+	$TSQL = "SELECT id, category, name, length, rented FROM videos ORDER BY category, name";
+}
+
 $stmnt = $mysqli->prepare($TSQL);
 
 if ($mysqli->connect_errno) {
 	echo 'MySQL Object Error on Prepare Category Lookup: '.$mysqli->connect_errno.' '.
 	$mysqli->connect_error;
-} else if (!isset($_POST)) {
-	$stmnt->bind_param("s", "'%'");
-	$stmnt->execute();
-} else {
-	if (!$_POST['catSel']) {
+} else if (isset($_POST)) {
+	if (!isset($_POST['catSel'])) {
 		$stmnt->bind_param("s", "'%'");
 	}	else if ($_POST['catSel'] == "All Movies") {
 		$stmnt->bind_param("s", "'%'");
 	} else {
 		$stmnt->bind_param("s", $_POST['catSel']);
 	}
+	$stmnt->execute();
+} else {
 	$stmnt->execute();
 }
 
