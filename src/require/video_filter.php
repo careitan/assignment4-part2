@@ -3,7 +3,7 @@
 	ini_set('display_errors', 'On');
 ?>
 <div class="filter"><form action="require/product_table.php" method=post>
-<label>Category:</label><input type=text list="categories" name="categorySel">
+<label>Category:</label><input type=text list="categories" name="catSel">
 <datalist id="categories">
 	<?php
 		include_once('categories_lookup.php');
