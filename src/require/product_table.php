@@ -12,7 +12,9 @@ if ($mysqli->connect_errno) {
 	$stmnt->bind_param("s", "'%'");
 	$stmnt->execute();
 } else {
-	if ($_POST['catSel'] == "All Movies") {
+	if (!$_POST['catSel']) {
+		$stmnt->bind_param("s", "'%'");
+	}	else if ($_POST['catSel'] == "All Movies") {
 		$stmnt->bind_param("s", "'%'");
 	} else {
 		$stmnt->bind_param("s", $_POST['catSel']);
