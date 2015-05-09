@@ -2,7 +2,7 @@
 	error_reporting(E_ALL);
 	ini_set('display_errors', 'On');
 ?>
-<div class="filter"><form action="require/product_table.php" method=post>
+<div class="filter"><form action="apply_filter.php" method=post>
 <label>Category:</label><input type=text list="categories" name="catSel">
 <datalist id="categories">
 	<?php
