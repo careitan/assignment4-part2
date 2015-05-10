@@ -18,8 +18,8 @@ if (!$stmnt) {
 } else {
 	$stmnt->bind_result($id, $category, $name, $length, $rented);
 
-	echo '<div class="products"><table><thead><th>Category</th><th>Name</th><th>Length</th><th>Rental Status</th>
-	<th>Actions</th></thead>';
+	echo '<div class="products"><table><thead><th class="limit">Category</th><th class="limit">Name</th><th class="limit">Length</th><th>Rental Status</th>
+	<th class="actions">Actions</th></thead>';
 	echo '<body>';
 
 	while($stmnt->fetch()){
