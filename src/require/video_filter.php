@@ -3,7 +3,7 @@
 	ini_set('display_errors', 'On');
 ?>
 <form class="filter" action="apply_filter.php" method=post>
-<label>Category:</label><input type=text list="categories" name="catSel">
+<label class="categoryfilter">Category:</label><input type=text list="categories" name="catSel">
 <datalist id="categories">
 	<?php
 		include_once('categories_lookup.php');
